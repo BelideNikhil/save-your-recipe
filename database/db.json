@@ -1,0 +1,71 @@
+{
+  "recipes": [
+    {
+      "id": "1",
+      "title": "VEGGIE STEW",
+      "ingredients": [
+        "1 Carrot",
+        "1 Leek",
+        "200g Tofu",
+        "300ml Veg stock"
+      ],
+      "method": "1. Pre-heat the oven to 200C/3C/gas 5. Place the carrot, leek and tofu in a large bowl. Add the stock and mix well. 2. Add the rest of the ingredients and mix well. 3. Place the mixture in a large bowl and cover with a lid. 4. Place the lid on the oven and cook for 40 minutes. 5. Serve with a slaw of your choice",
+      "cookingTime": "45 minutes"
+    },
+    {
+      "id": "2",
+      "title": "VEGGIE PIZZA",
+      "ingredients": [
+        "1 Base",
+        "Tomata pasata",
+        "1 Green pepper",
+        "100g Mushrooms"
+      ],
+      "method": "1. Pre-heat the oven to 200C/3C/gas 5. Add the pasata, green pepper and mushrooms to the base. Place the lid on the oven and cook for 30 minutes. 5. Serve with a slaw of your choice",
+      "cookingTime": "35 minutes"
+    },
+    {
+      "title": "EGG OMLETTE",
+      "ingredients": [
+        "Egg",
+        " Butter",
+        " Any Veggies",
+        "Salt",
+        " Chilli"
+      ],
+      "method": "Beat the eggs: Use two or three eggs per omelette, depending on how hungry you are. Beat the eggs lightly with a fork.\nMelt the butter: Use an 8-inch nonstick skillet for a 2-egg omelette, a 9-inch skillet for 3 eggs. Melt the butter over medium-low heat, and keep the temperature low and slow when cooking the eggs so the bottom doesn’t get too brown or overcooked.\nAdd the eggs: Let the eggs sit for a minute, then use a heatproof silicone spatula to gently lift the cooked eggs from the edges of the pan. Tilt the pan to allow the uncooked eggs to flow to the edge of the pan.\nFill the omelette: Add the filling—but don’t overstuff the omelette—when the eggs begin to set. Cook for a few more seconds\nFold and serve: Fold the omelette in half. Slide it onto a plate with the help of a silicone spatula.",
+      "cookingTime": "30 minutes.",
+      "id": "WNCVtdp"
+    },
+    {
+      "id": "3",
+      "title": "GREEK SALAD",
+      "ingredients": [
+        "1 Onion",
+        "1 Block of Feta",
+        "Olives",
+        "Tomatoes",
+        "Olive Oil"
+      ],
+      "method": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse minima ex rem quis similique eum ratione quaerat, voluptas molestias ut repudiandae delectus voluptates. Eius esse at tenetur ab accusamus excepturi?",
+      "cookingTime": "35 minutes"
+    },
+    {
+      "title": "EGG RICE",
+      "ingredients": [
+        "Egg",
+        " Oil",
+        " Onion",
+        " Veggies",
+        " Salt",
+        " Soy Sauce",
+        " Rice",
+        " Masala",
+        ""
+      ],
+      "method": "Crack the eggs into a small bowl and beat them together.\nHeat a skillet with 1 tablespoon of the oil over medium-high heat. Once the pan is hot, add the beaten eggs and scramble them for about a minute. Transfer the eggs to a dish and turn off the heat.\nDrizzle the remaining 2 tablespoons of oil into a wok over high heat. Add the onions and cook them for about 1 to 2 minutes, stirring constantly. Add the mixed vegetables and white parts of the scallions and cook for 2 minutes. Season the vegetables with a pinch of salt.\nAdd the cooked rice into the pan or wok and cook for several minutes, until the rice is heated through. If there are large clumps of rice, break them apart with the back of your spatula.\nAdd the soy sauce, five-spice powder, dash of white pepper (if using) and sesame oil and stir to distribute the seasonings. (See note 6) Add the scrambled eggs and stir to mix again. Garnish with remaining sliced scallions. Serve immediately.",
+      "cookingTime": "45 minutes.",
+      "id": "fTgrLqS"
+    }
+  ]
+}
