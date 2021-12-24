@@ -23,7 +23,7 @@ export default function Navbar() {
           <li className='search-recipe'>
             <NavLink to="">
               <form onSubmit={searchHandler}>
-                <input type="text" placeholder='Search & Enter...' onChange={(e)=>setSearch(e.target.value.toUpperCase())} value={search}/>
+                <input disabled type="text" placeholder='Under Construction...' onChange={(e)=>setSearch(e.target.value.toUpperCase())} value={search}/>
               </form>
             </NavLink>
           </li>
