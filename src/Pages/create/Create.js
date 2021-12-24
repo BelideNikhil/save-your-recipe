@@ -8,15 +8,22 @@ export default function Create() {
     const [title,setTitle]=useState('')
     const [cookingTime,setCookingTime]=useState('')
     const [ingredients,setIngredients]=useState('')
+    let [ingredientsArray,setIngredientsArray]=useState('')
     const [instructions,setInstructions]=useState('')
 
     const {mode}=useTheme()
     const navigate=useNavigate()
 
+    //splitting ing's-string and then saving
+    useEffect(()=>{
+        ingredientsArray=ingredients.split(',')
+        setIngredientsArray(ingredientsArray)
+    },[ingredients])
+
     const submitHandler=async(e)=>{
         e.preventDefault()
-        const data= {title,ingredients,method:instructions,cookingTime:cookingTime+' minutes'}
-        // tru adding to database and if it fails then consoling error
+        const data= {title,ingredients:ingredientsArray,method:instructions,cookingTime:cookingTime+' minutes'}
+        // try adding to database and if it fails then consoling error
         try{
             await fromFirebase.collection('recipes').add(data)
             navigate('/')
