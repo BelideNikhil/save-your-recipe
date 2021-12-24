@@ -1,6 +1,6 @@
 import { useState,useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import useFetch from '../../Hooks/useFetch'
+import {fromFirebase} from '../../Firebase/config'
 import { useTheme } from '../../Hooks/useTheme'
 import './Create.css'
 
@@ -8,28 +8,21 @@ export default function Create() {
     const [title,setTitle]=useState('')
     const [cookingTime,setCookingTime]=useState('')
     const [ingredients,setIngredients]=useState('')
-    const [ingredientArray,setIngArray]=useState([])
     const [instructions,setInstructions]=useState('')
 
     const {mode}=useTheme()
-
-    const {saveData,data}=useFetch('http://localhost:3000/recipes',"POST")
     const navigate=useNavigate()
 
-    useEffect(()=>{
-        const ing=ingredients.split(',')
-        setIngArray(ing)
-    },[ingredients])
-
-    useEffect(()=>{
-        if(data){
-            navigate('/')
-        }
-    },[data])
-
-    function submitHandler(e){
+    const submitHandler=async(e)=>{
         e.preventDefault()
-        saveData({title,ingredients:ingredientArray,method:instructions,cookingTime:cookingTime+' minutes.'})
+        const data= {title,ingredients,method:instructions,cookingTime:cookingTime+' minutes'}
+        // tru adding to database and if it fails then consoling error
+        try{
+            await fromFirebase.collection('recipes').add(data)
+            navigate('/')
+        }catch{
+            console.log("error occured while adding...")
+        }
     }
     return (
         <div className={`create-recipe ${mode?"dark":null}`}>
