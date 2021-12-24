@@ -1,13 +1,29 @@
+import {useState,useEffect} from 'react'
 import {useParams} from 'react-router-dom'
-import useFetch from '../../Hooks/useFetch'
 import { useTheme } from '../../Hooks/useTheme';
+import {fromFirebase} from '../../Firebase/config'
 import './Recipe.css'
 
 export default function Recipe() {
+    let [recipe,setRecipe]=useState(null)
+    let [isPending,setIsPending]=useState(false)
+    let [error,setError]=useState(null)
+
     const {id}=useParams();
-    const url='http://localhost:3000/recipes/'+ id
-    const {data:recipe,isPending,failure:error}=useFetch(url)
     const{mode}=useTheme()
+
+    useEffect(()=>{
+        setIsPending(true)
+        fromFirebase.collection('recipes').doc(id).get()
+        .then(doc=>{
+            if(doc.exists){
+                setRecipe({...doc.data()})
+            }else{
+                setError('Not found')
+            }
+        })
+        .catch(err=>setError(err))
+    },[id])
 
     return (
         <div className={`recipe ${mode?"dark":null}`}>
