@@ -1,0 +1,49 @@
+.create-recipe{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.form{
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25rem;
+    border-radius: 10px;
+}
+.form>*{
+    margin: 0.6rem 0;
+    font-weight: 800;
+    border: 3px solid var(--secondary-color);
+    border-radius: 0.3rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.form input,textarea{
+    width: 100%;
+    padding: 0.8rem 0.4rem;
+}
+textarea {
+    resize: none;
+}
+.save-recipe-btn{
+    display: inline-block;
+    width: max-content;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+.save-recipe-btn:hover{
+    background-color: var(--secondary-color);
+}
+
+@media screen and (max-width:450px) {
+    .form{
+        padding: 0.8rem;
+        width: 18rem;
+    }
+    .form>*{
+        margin: 0.4rem 0;
+    }
+}
