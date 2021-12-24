@@ -11,6 +11,7 @@
     align-items:center;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
     padding:1.5rem;
+    position: relative;
 }
 .recipe-card>*{
     margin: 0.4rem 0;
@@ -21,7 +22,12 @@
     border: 3px solid var(--secondary-color);
     border-radius: 3px;
 }
-
+.delete-recipe{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+}
 @media screen and (max-width:640px) {
     .recipe-list{
         display: grid;
