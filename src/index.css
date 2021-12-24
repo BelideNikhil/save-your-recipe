@@ -24,3 +24,10 @@ input:focus,textarea:focus{
   border: none;
   transform: scale(1.05);
 }
+.loading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
